@@ -54,4 +54,17 @@
     <compiler name="default" spec="tricore.cspec" id="default"/>
     <external_name tool="DWARF.register.mapping.file" name="tricore.dwarf"/>
   </language>
+    <language processor="tricore"
+            endian="little"
+            size="32"
+            variant="TC1797"
+            version="1.3"
+            slafile="tricore.sla"
+            processorspec="tc1797.pspec"
+	    manualindexfile="../manuals/tricore.idx"
+            id="tricore:LE:32:tc1797">
+    <description>Siemens Tricore Embedded Processor TC1797</description>
+    <compiler name="default" spec="tricore.cspec" id="default"/>
+    <external_name tool="DWARF.register.mapping.file" name="tricore.dwarf"/>
+  </language>
 </language_definitions>

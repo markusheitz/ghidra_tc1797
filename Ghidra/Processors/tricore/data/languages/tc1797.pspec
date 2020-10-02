@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<processor_spec>
+  <properties>
+    <property key="emulateInstructionStateModifierClass"
+              value="ghidra.program.emulation.TRICOREEmulateInstructionStateModifier"/>
+  </properties>
+
+  <programcounter register="PC"/>
+  <data_space space="ram"/>
+
+  <default_memory_blocks>
+    <memory_block name="SPRAM.12" start_address="0xc0000000" length="0xa000" mode="rwv" initialized="false"/>
+    <memory_block name="LDRAM.13" start_address="0xd0000000" length="0x20000" mode="rwv" initialized="false"/>
+    <memory_block name="SPRAM.13" start_address="0xd4000000" length="0xa000" mode="rwv" initialized="false"/>
+    <memory_block name="LDRAM.14" start_address="0xe8400000" length="0x20000" mode="rwv" initialized="false"/>
+    <memory_block name="SPRAM.14" start_address="0xe8500000" length="0xa000" mode="rwv" initialized="false"/>
+    <memory_block name="SBCU" start_address="0xf0000100" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="STM" start_address="0xf0000200" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="CERBERUS" start_address="0xf0000400" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="SCUWDT" start_address="0xf0000500" length="0x200" mode="rwv" initialized="false"/>
+    <memory_block name="MSC0" start_address="0xf0000800" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="MSC1" start_address="0xf0000900" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="ASC0" start_address="0xf0000A00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="ASC1" start_address="0xf0000B00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT0" start_address="0xf0000C00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT1" start_address="0xf0000D00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT2" start_address="0xf0000E00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT3" start_address="0xf0000F00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT4" start_address="0xf0001000" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT5" start_address="0xf0001100" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT6" start_address="0xf0001200" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT7" start_address="0xf0001300" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT8" start_address="0xf0001400" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT9" start_address="0xf0001500" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT10" start_address="0xf0001600" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT11" start_address="0xf0001700" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="GPTA0" start_address="0xf0001800" length="0x800" mode="rwv" initialized="false"/>
+    <memory_block name="GPTA1" start_address="0xf0002000" length="0x800" mode="rwv" initialized="false"/>
+    <memory_block name="LTCA2" start_address="0xf0002800" length="0x800" mode="rwv" initialized="false"/>
+    <memory_block name="DMA" start_address="0xf0003C00" length="0x300" mode="rwv" initialized="false"/>
+    <memory_block name="CAN" start_address="0xf0004000" length="0x4000" mode="rwv" initialized="false"/>
+    <memory_block name="ERAY" start_address="0xf0010000" length="0x8000" mode="rwv" initialized="false"/>
+    <memory_block name="PCP.REG" start_address="0xf0043F00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PCP.PRAM" start_address="0xf0050000" length="0x4000" mode="rwv" initialized="false"/>
+    <memory_block name="PCP.CMEM" start_address="0xf0060000" length="0x8000" mode="rwv" initialized="false"/>
+    <memory_block name="SSC0" start_address="0xf0100100" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="SSC1" start_address="0xf0100200" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="FADC" start_address="0xf0100400" length="0x200" mode="rwv" initialized="false"/>
+    <memory_block name="ADC0" start_address="0xf0101000" length="0x400" mode="rwv" initialized="false"/>
+    <memory_block name="ADC1" start_address="0xf0101400" length="0x400" mode="rwv" initialized="false"/>
+    <memory_block name="ADC2" start_address="0xf0101800" length="0x400" mode="rwv" initialized="false"/>
+    <memory_block name="MLI0" start_address="0xf010C000" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="MLI1" start_address="0xf010C100" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="MCHK" start_address="0xf010C200" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="MLI0stw" start_address="0xf01e0000" length="0x8000" mode="rwv" initialized="false"/>
+    <memory_block name="MLI1stw" start_address="0xf01e8000" length="0x8000" mode="rwv" initialized="false"/>
+    <memory_block name="MLI0ltw" start_address="0xf0200000" length="0x40000" mode="rwv" initialized="false"/>
+    <memory_block name="MLI1ltw" start_address="0xf0240000" length="0x40000" mode="rwv" initialized="false"/>
+    <memory_block name="PORT11" start_address="0xf0300000" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT12" start_address="0xf0300100" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT13" start_address="0xf0300200" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT14" start_address="0xf0300300" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT15" start_address="0xf0300400" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PORT16" start_address="0xf0300500" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="CPU.CPS" start_address="0xf7E0FF00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="CPU.SFRGPR" start_address="0xf7E10000" length="0x10000" mode="rwv" initialized="false"/>
+    <memory_block name="EBU" start_address="0xf8000000" length="0x400" mode="rwv" initialized="false"/>
+    <memory_block name="PMU0" start_address="0xf8000500" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PMU1" start_address="0xf8000600" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="PMU0flash" start_address="0xf8001000" length="0x1400" mode="rwv" initialized="false"/>
+    <memory_block name="PMU1flash" start_address="0xf8003000" length="0x1400" mode="rwv" initialized="false"/>
+    <memory_block name="OVC" start_address="0xf87ffb00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="CPU.DMI" start_address="0xf87FFC00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="CPU.PMI" start_address="0xf87FFD00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="LBCU" start_address="0xf87FFE00" length="0x100" mode="rwv" initialized="false"/>
+    <memory_block name="LFI" start_address="0xf87FFF00" length="0x100" mode="rwv" initialized="false"/>
+  </default_memory_blocks>
+
+
+  <default_symbols>
+    <symbol name="OSCCON" address="0xf000010" entry="false"/>
+    <symbol name="PLLSTAT" address="0xf000014" entry="false"/>
+    <symbol name="PLLCON0" address="0xf000018" entry="false"/>
+    <symbol name="PLLCON1" address="0xf00001c" entry="false"/>
+    <symbol name="PLLERAY" address="0xf000020" entry="false"/>
+    <symbol name="CCUCON0" address="0xf000030" entry="false"/>
+    <symbol name="CCUCON1" address="0xf000034" entry="false"/>
+    <symbol name="FDR" address="0xf000038" entry="false"/>
+    <symbol name="EXTCON" address="0xf00003c" entry="false"/>
+    <symbol name="SYSCON" address="0xf000040" entry="false"/>
+    <symbol name="RSTSTAT" address="0xf000050" entry="false"/>
+    <symbol name="RSTCNTCON" address="0xf000054" entry="false"/>
+    <symbol name="RSTCON" address="0xf000058" entry="false"/>
+    <symbol name="ARSTDIS" address="0xf00005c" entry="false"/>
+    <symbol name="SWRSTCON" address="0xf000060" entry="false"/>
+    <symbol name="ESRCFG0" address="0xf000070" entry="false"/>
+    <symbol name="ESRCFG1" address="0xf000074" entry="false"/>
+    <symbol name="EICR0" address="0xf000080" entry="false"/>
+    <symbol name="EICR1" address="0xf000084" entry="false"/>
+    <symbol name="EIFR" address="0xf000088" entry="false"/>
+    <symbol name="FMR" address="0xf00008c" entry="false"/>
+    <symbol name="PDRR" address="0xf000090" entry="false"/>
+    <symbol name="IGCR0" address="0xf000094" entry="false"/>
+    <symbol name="IGCR1" address="0xf000098" entry="false"/>
+    <symbol name="IOCR" address="0xf0000a0" entry="false"/>
+    <symbol name="OUT" address="0xf0000a4" entry="false"/>
+    <symbol name="OMR" address="0xf0000a8" entry="false"/>
+    <symbol name="IN" address="0xf0000ac" entry="false"/>
+    <symbol name="PMCSR" address="0xf0000b0" entry="false"/>
+    <symbol name="STSTAT" address="0xf0000c0" entry="false"/>
+    <symbol name="STCON" address="0xf0000c4" entry="false"/>
+    <symbol name="PETCR" address="0xf0000d0" entry="false"/>
+    <symbol name="PETSR" address="0xf0000d4" entry="false"/>
+    <symbol name="DTSSTAT" address="0xf0000e0" entry="false"/>
+    <symbol name="DTSCON" address="0xf0000e4" entry="false"/>
+    <symbol name="WDT_CON0" address="0xf0000f0" entry="false"/>
+    <symbol name="WDT_CON1" address="0xf0000f4" entry="false"/>
+    <symbol name="WDT_SR " address="0xf0000f8" entry="false"/>
+    <symbol name="EMSR" address="0xf000100" entry="false"/>
+    <symbol name="INTSTAT" address="0xf000110" entry="false"/>
+    <symbol name="INTSET" address="0xf000114" entry="false"/>
+    <symbol name="INTCLR" address="0xf000118" entry="false"/>
+    <symbol name="INTDIS" address="0xf00011c" entry="false"/>
+    <symbol name="INTNP" address="0xf000120" entry="false"/>
+    <symbol name="TRAPSTAT" address="0xf000124" entry="false"/>
+    <symbol name="TRAPSET" address="0xf000128" entry="false"/>
+    <symbol name="TRAPCLR" address="0xf00012c" entry="false"/>
+    <symbol name="TRAPDIS" address="0xf000130" entry="false"/>
+    <symbol name="CHIPID" address="0xf000140" entry="false"/>
+    <symbol name="MANID" address="0xf000144" entry="false"/>
+    <symbol name="RTID" address="0xf000148" entry="false"/>
+    <symbol name="SRC3" address="0xf0001f0" entry="false"/>
+    <symbol name="SRC2" address="0xf0001f4" entry="false"/>
+    <symbol name="SRC1" address="0xf0001f8" entry="false"/>
+    <symbol name="SRC0" address="0xf0001fc" entry="false"/>
+    <symbol name="WDT_CON0" address="0xf00005f0" entry="false"/>
+    <symbol name="WDT_CON1" address="0xf00005f4" entry="false"/>
+    <symbol name="WDT_SR" address="0xf00005f8" entry="false"/>
+    <symbol name="PMCSR" address="0xf00000b0" entry="false"/>
+    <symbol name="MSC0_CLC" address="0xf0000800" entry="false"/>
+    <symbol name="MSC0_ID" address="0xf0000808" entry="false"/>
+    <symbol name="MSC0_FDR" address="0xf000080c" entry="false"/>
+    <symbol name="MSC0_USR" address="0xf0000810" entry="false"/>
+    <symbol name="MSC0_DSC" address="0xf0000814" entry="false"/>
+    <symbol name="MSC0_DSS" address="0xf0000818" entry="false"/>
+    <symbol name="MSC0_DD" address="0xf000081c" entry="false"/>
+    <symbol name="MSC0_DC" address="0xf0000820" entry="false"/>
+    <symbol name="MSC0_DSDSL" address="0xf0000824" entry="false"/>
+    <symbol name="MSC0_DSDSH" address="0xf0000828" entry="false"/>
+    <symbol name="MSC0_ESR" address="0xf000082c" entry="false"/>
+    <symbol name="MSC0_UD0" address="0xf0000830" entry="false"/>
+    <symbol name="MSC0_UD1" address="0xf0000834" entry="false"/>
+    <symbol name="MSC0_UD2" address="0xf0000838" entry="false"/>
+    <symbol name="MSC0_UD3" address="0xf000083c" entry="false"/>
+    <symbol name="MSC0_ICR" address="0xf0000840" entry="false"/>
+    <symbol name="MSC0_ISR" address="0xf0000844" entry="false"/>
+    <symbol name="MSC0_ISC" address="0xf0000848" entry="false"/>
+    <symbol name="MSC0_OCR" address="0xf000084c" entry="false"/>
+    <symbol name="MSC0_SRC1" address="0xf00008f8" entry="false"/>
+    <symbol name="MSC0_SRC0" address="0xf00008fc" entry="false"/>
+    <symbol name="MSC1_CLC" address="0xf0000900" entry="false"/>
+    <symbol name="MSC1_ID" address="0xf0000908" entry="false"/>
+    <symbol name="MSC1_FDR" address="0xf000090c" entry="false"/>
+    <symbol name="MSC1_USR" address="0xf0000910" entry="false"/>
+    <symbol name="MSC1_DSC" address="0xf0000914" entry="false"/>
+    <symbol name="MSC1_DSS" address="0xf0000918" entry="false"/>
+    <symbol name="MSC1_DD" address="0xf000091c" entry="false"/>
+    <symbol name="MSC1_DC" address="0xf0000920" entry="false"/>
+    <symbol name="MSC1_DSDSL" address="0xf0000924" entry="false"/>
+    <symbol name="MSC1_DSDSH" address="0xf0000928" entry="false"/>
+    <symbol name="MSC1_ESR" address="0xf000092c" entry="false"/>
+    <symbol name="MSC1_UD0" address="0xf0000930" entry="false"/>
+    <symbol name="MSC1_UD1" address="0xf0000934" entry="false"/>
+    <symbol name="MSC1_UD2" address="0xf0000938" entry="false"/>
+    <symbol name="MSC1_UD3" address="0xf000093c" entry="false"/>
+    <symbol name="MSC1_ICR" address="0xf0000940" entry="false"/>
+    <symbol name="MSC1_ISR" address="0xf0000944" entry="false"/>
+    <symbol name="MSC1_ISC" address="0xf0000948" entry="false"/>
+    <symbol name="MSC1_OCR" address="0xf000094c" entry="false"/>
+    <symbol name="MSC1_SRC1" address="0xf00009f8" entry="false"/>
+    <symbol name="MSC1_SRC0" address="0xf00009fc" entry="false"/>
+    <symbol name="ASC0_CLC" address="0xf0000a00" entry="false"/>
+    <symbol name="ASC0_PISEL" address="0xf0000a04" entry="false"/>
+    <symbol name="ASC0_ID" address="0xf0000a08" entry="false"/>
+    <symbol name="ASC0_CON" address="0xf0000a10" entry="false"/>
+    <symbol name="ASC0_BG" address="0xf0000a14" entry="false"/>
+    <symbol name="ASC0_FDV" address="0xf0000a18" entry="false"/>
+    <symbol name="ASC0_TBUF" address="0xf0000a20" entry="false"/>
+    <symbol name="ASC0_RBUF" address="0xf0000a24" entry="false"/>
+    <symbol name="ASC0_WHBCON" address="0xf0000a50" entry="false"/>
+    <symbol name="ASC0_TSRC" address="0xf0000af0" entry="false"/>
+    <symbol name="ASC0_RSRC" address="0xf0000af4" entry="false"/>
+    <symbol name="ASC0_ESRC" address="0xf0000af8" entry="false"/>
+    <symbol name="ASC0_TBSRC" address="0xf0000afc" entry="false"/>
+    <symbol name="ASC1_PISEL" address="0xf0000b04" entry="false"/>
+    <symbol name="ASC1_ID" address="0xf0000b08" entry="false"/>
+    <symbol name="ASC1_CON" address="0xf0000b10" entry="false"/>
+    <symbol name="ASC1_BG" address="0xf0000b14" entry="false"/>
+    <symbol name="ASC1_FDV" address="0xf0000b18" entry="false"/>
+    <symbol name="ASC1_TBUF" address="0xf0000b20" entry="false"/>
+    <symbol name="ASC1_RBUF" address="0xf0000b24" entry="false"/>
+    <symbol name="ASC1_WHBCON" address="0xf0000b50" entry="false"/>
+    <symbol name="ASC1_TSRC" address="0xf0000bf0" entry="false"/>
+    <symbol name="ASC1_RSRC" address="0xf0000bf4" entry="false"/>
+    <symbol name="ASC1_ESRC" address="0xf0000bf8" entry="false"/>
+    <symbol name="ASC1_TBSRC" address="0xf0000bfc" entry="false"/>
+    <symbol name="CPS_ID" address="0xf7e0ff08" entry="false"/>
+    <symbol name="CPU_SBSRC" address="0xf7e0ffbc" entry="false"/>
+    <symbol name="CPU_SRC3" address="0xf7e0fff0" entry="false"/>
+    <symbol name="CPU_SRC2" address="0xf7e0fff4" entry="false"/>
+    <symbol name="CPU_SRC1" address="0xf7e0fff8" entry="false"/>
+    <symbol name="CPU_SRC0" address="0xf7e0fffc" entry="false"/>
+    <symbol name="ADC0_ID" address="0xf0101008" entry="false"/>
+    <symbol name="ADC1_ID" address="0xf0101408" entry="false"/>
+    <symbol name="ADC2_ID" address="0xf0101808" entry="false"/>
+    <symbol name="ASC0_ID" address="0xf0000a08" entry="false"/>
+    <symbol name="ASC1_ID" address="0xf0000b08" entry="false"/>
+    <symbol name="CAN_ID" address="0xf0004008" entry="false"/>
+    <symbol name="CBS_JDPID" address="0xf0000408" entry="false"/>
+    <symbol name="CBS_JTAGID" address="0xf0000464" entry="false"/>
+    <symbol name="CPS_ID" address="0xf7e0ff08" entry="false"/>
+    <symbol name="CPU_ID" address="0xf7e1fe18" entry="false"/>
+    <symbol name="DMA_ID" address="0xf0003c08" entry="false"/>
+    <symbol name="DMI_ID" address="0xf87ffc08" entry="false"/>
+    <symbol name="EBU_ID" address="0xf8000008" entry="false"/>
+    <symbol name="ERAY_ID" address="0xf0010008" entry="false"/>
+    <symbol name="FADC_ID" address="0xf0100408" entry="false"/>
+    <symbol name="FLASH0_ID" address="0xf8002008" entry="false"/>
+    <symbol name="FLASH1_ID" address="0xf8004008" entry="false"/>
+    <symbol name="FPU_ID" address="0xf7e1a020" entry="false"/>
+    <symbol name="GPTA0_ID" address="0xf0001808" entry="false"/>
+    <symbol name="GPTA1_ID" address="0xf0002008" entry="false"/>
+    <symbol name="LBCU_ID" address="0xf87ffe08" entry="false"/>
+    <symbol name="LFI_ID" address="0xf87fff08" entry="false"/>
+    <symbol name="LTCA2_ID" address="0xf0002808" entry="false"/>
+    <symbol name="MCHK_ID" address="0xf010c208" entry="false"/>
+    <symbol name="MLI0_ID" address="0xf010c008" entry="false"/>
+    <symbol name="MLI1_ID" address="0xf010c108" entry="false"/>
+    <symbol name="MSC0_ID" address="0xf0000808" entry="false"/>
+    <symbol name="MSC1_ID" address="0xf0000908" entry="false"/>
+    <symbol name="PCP_ID" address="0xf0043f08" entry="false"/>
+    <symbol name="PMI_ID" address="0xf87ffd08" entry="false"/>
+    <symbol name="PMU0_ID" address="0xf8000508" entry="false"/>
+    <symbol name="PMU1_ID" address="0xf8006008" entry="false"/>
+    <symbol name="SBCU_ID" address="0xf0000108" entry="false"/>
+    <symbol name="SCU_CHIPID" address="0xf0000640" entry="false"/>
+    <symbol name="SCU_ID" address="0xf0000508" entry="false"/>
+    <symbol name="SCU_MANID" address="0xf0000644" entry="false"/>
+    <symbol name="SCU_RTID" address="0xf0000648" entry="false"/>
+    <symbol name="SSC0_ID" address="0xf0100108" entry="false"/>
+    <symbol name="SSC1_ID" address="0xf0100208" entry="false"/>
+    <symbol name="STM_ID" address="0xf0000208" entry="false"/>
+  </default_symbols>
+</processor_spec>
