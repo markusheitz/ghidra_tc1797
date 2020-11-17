@@ -10,6 +10,8 @@
   <data_space space="ram"/>
 
   <default_memory_blocks>
+    <memory_block name="PFLASH1.10" start_address="0xa0000000" length="0x20000" mode="rwv" initialized="false"/>
+    <memory_block name="PFLASH2.10" start_address="0xa0200000" length="0x20000" mode="rwv" initialized="false"/>
     <memory_block name="SPRAM.12" start_address="0xc0000000" length="0xa000" mode="rwv" initialized="false"/>
     <memory_block name="LDRAM.13" start_address="0xd0000000" length="0x20000" mode="rwv" initialized="false"/>
     <memory_block name="SPRAM.13" start_address="0xd4000000" length="0xa000" mode="rwv" initialized="false"/>
