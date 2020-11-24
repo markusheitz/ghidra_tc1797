@@ -1,6 +1,0 @@
-#+TITLE: Ghidra Tc1797 Notes
-* Loaders
-The Ghidra Book
-Loaders are in file:Ghidra/Features/Base/src/main/java/ghidra/app/util/opinion
-file:./Ghidra/Processors/tricore/data/languages/tricore.opinion
-Loaders need to be implemented in Java.
